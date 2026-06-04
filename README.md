@@ -1,7 +1,9 @@
 # OpenKanban Vue
 
 > A fully interactive Trello-like Kanban board built with Vue 3, TypeScript, Pinia, and Tailwind CSS — no backend required.
-
+![Main Board Image](image.png)
+![Task Screen](image-1.png)
+![Dark View](image-2.png)
 ## Features
 
 - **Fully Interactive Drag & Drop**: Move cards between columns, reorder lists, and organize your work effortlessly using `vuedraggable`.
