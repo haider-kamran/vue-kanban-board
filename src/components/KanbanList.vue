@@ -201,15 +201,15 @@ const deleteList = () => {
 // ── Click-outside directive ──
 const vClickOutside = {
   mounted(el: HTMLElement, binding: { value: () => void }) {
-    el._clickOutsideHandler = (event: MouseEvent) => {
+    (el as any)._clickOutsideHandler = (event: MouseEvent) => {
       if (!el.contains(event.target as Node)) {
         binding.value()
       }
     }
-    document.addEventListener('click', el._clickOutsideHandler)
+    document.addEventListener('click', (el as any)._clickOutsideHandler)
   },
   unmounted(el: HTMLElement) {
-    document.removeEventListener('click', el._clickOutsideHandler)
+    document.removeEventListener('click', (el as any)._clickOutsideHandler)
   }
 }
 </script>
